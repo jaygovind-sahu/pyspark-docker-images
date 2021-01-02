@@ -27,7 +27,17 @@ Access `spark-submit`:
 docker run -it jaygovind/pyspark:python-3.7-spark-2.4.7 spark-submit
 ```
 
-## Images
+## Docker tags
+### latest
+```docker
+docker pull jaygovind/pyspark:latest
+```
+Python: 3.7<br/>
+Spark: 2.4.7
+
 ### python-3.7-spark-2.4.7
+```docker
+docker pull jaygovind/pyspark:python-3.7-spark-2.4.7
+```
 Python: 3.7<br/>
 Spark: 2.4.7
