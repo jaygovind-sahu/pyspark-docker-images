@@ -1,5 +1,13 @@
 # PySpark Docker Images
 
+## Docker tags
+
+| Docker tag                      | Python | Spark | Openjdk   |
+|---------------------------------|--------|-------|-----------|
+| python-3.7-spark-3.0.1 (latest) | 3.7    | 3.0.1 | 11.0.9.1  |
+| python-3.7-spark-2.4.7          | 3.7    | 2.4.7 | 1.8.0_275 |
+| python-3.6-spark-2.4.7          | 3.6    | 2.4.7 | 1.8.0_275 |
+
 ## Usage
 
 Pull Docker image:
@@ -27,35 +35,35 @@ Access `spark-submit`:
 docker run -it jaygovind/pyspark:latest spark-submit
 ```
 
-## Docker tags
-### latest
-```shell
-docker pull jaygovind/pyspark:latest
-```
-Python: 3.7<br/>
-Spark: 3.0.1<br/>
-openjdk: 11.0.9.1
+### Running the examples and shell
+(source: https://spark.apache.org/docs/latest/)
 
-### python-3.7-spark-3.0.1
-```shell
-docker pull jaygovind/pyspark:latest
-```
-Python: 3.7<br/>
-Spark: 3.0.1<br/>
-openjdk: 11.0.9.1
+Spark comes with several sample programs. Scala, Java, Python and R examples are in the 
+`examples/src/main` directory. To run one of the Java or Scala sample programs, use 
+`bin/run-example <class> [params]` in the top-level Spark directory. (Behind the scenes, 
+this invokes the more general spark-submit script for launching applications). For example,
 
-### python-3.7-spark-2.4.7
 ```shell
-docker pull jaygovind/pyspark:python-3.7-spark-2.4.7
+./bin/run-example SparkPi 10
 ```
-Python: 3.7<br/>
-Spark: 2.4.7<br/>
-openjdk: 1.8.0_275
+You can also run Spark interactively through a modified version of the Scala shell. This 
+is a great way to learn the framework.
 
-### python-3.6-spark-2.4.7
 ```shell
-docker pull jaygovind/pyspark:python-3.6-spark-2.4.7
+./bin/spark-shell --master local[2]
 ```
-Python: 3.6<br/>
-Spark: 2.4.7<br/>
-openjdk: 1.8.0_275
+The `--master` option specifies the master URL for a distributed cluster, or local to run locally 
+with one thread, or `local[N]` to run locally with N threads. You should start by using local for 
+testing. For a full list of options, run Spark shell with the `--help` option.
+
+Spark also provides a Python API. To run Spark interactively in a Python interpreter, use 
+`bin/pyspark`:
+
+```shell
+./bin/pyspark --master local[2]
+```
+Example applications are also provided in Python. For example,
+
+```shell
+./bin/spark-submit examples/src/main/python/pi.py 10
+```
