@@ -1,14 +1,14 @@
 FROM openjdk:8-jre-slim
 
 # Update and install dependencies
-RUN apt-get update -y && \
+RUN apt-get update && \
     apt-get install wget -y
 
 # Install Python and add symlink
 RUN apt-get install python3.7 -y && \
     ln -s /usr/bin/python3.7 /usr/bin/python
 
-# Down Spark
+# Download Spark
 RUN wget -P /tmp https://archive.apache.org/dist/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz --tries=5 && \
     tar xvf /tmp/spark-2.4.7-bin-hadoop2.7.tgz --directory /opt && \
     rm /tmp/spark-2.4.7-bin-hadoop2.7.tgz
