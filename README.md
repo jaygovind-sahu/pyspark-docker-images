@@ -1,12 +1,19 @@
 # PySpark Docker Images
 
+Please report issues or request new images here:<br/>
+https://github.com/jaygovind-sahu/pyspark-docker-images/issues
+
 ## Docker tags
 
-| Docker tag                      | Python | Spark | Openjdk   |
-|---------------------------------|--------|-------|-----------|
-| python-3.7-spark-3.0.1 (latest) | 3.7    | 3.0.1 | 11.0.9.1  |
-| python-3.7-spark-2.4.7          | 3.7    | 2.4.7 | 1.8.0_275 |
-| python-3.6-spark-2.4.7          | 3.6    | 2.4.7 | 1.8.0_275 |
+| Docker tag                       | Python | Spark | Openjdk   |
+|----------------------------------|--------|-------|-----------|
+| latest                           | 3.8    | 3.0.1 | 11        |
+| python-3.8-spark-3.0.1           | 3.8    | 3.0.1 | 11        |
+| python-3.8-spark-3.0.1-openjdk-8 | 3.8    | 3.0.1 | 8         |
+| python-3.7-spark-3.0.1           | 3.7    | 3.0.1 | 11        |
+| python-3.7-spark-3.0.1-openjdk-8 | 3.7    | 3.0.1 | 8         |
+| python-3.7-spark-2.4.7           | 3.7    | 2.4.7 | 8         |
+| python-3.6-spark-2.4.7           | 3.6    | 2.4.7 | 8         |
 
 ## Usage
 

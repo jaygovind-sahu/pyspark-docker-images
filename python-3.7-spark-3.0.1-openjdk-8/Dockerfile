@@ -1,7 +1,7 @@
 FROM python:3.7-alpine
 
 # Update and install dependencies
-RUN apk add --update --no-cache wget bash openjdk11
+RUN apk add --update --no-cache wget bash openjdk8
 
 # Download Spark
 RUN wget -P /tmp https://archive.apache.org/dist/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz --tries=5 && \

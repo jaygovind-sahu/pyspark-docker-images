@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.8-alpine
 
 # Update and install dependencies
 RUN apk add --update --no-cache wget bash openjdk11
