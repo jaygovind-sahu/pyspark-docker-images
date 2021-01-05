@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push - python-3.6-spark-2.4.7
-        id: python-3.6-spark-2.4.7
+        id: python-36-spark-247
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -34,7 +34,7 @@ jobs:
             PY4J_VERSION=0.10.7
       -
         name: Build and push - python-3.7-spark-2.4.7
-        id: python-3.7-spark-2.4.7
+        id: python-37-spark-247
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -46,7 +46,7 @@ jobs:
             PY4J_VERSION=0.10.7
       -
         name: Build and push - python-3.7-spark-3.0.1-openjdk-8
-        id: python-3.7-spark-3.0.1-openjdk-8
+        id: python-37-spark-301-openjdk-8
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -58,7 +58,7 @@ jobs:
             PY4J_VERSION=0.10.9
       -
         name: Build and push - python-3.7-spark-3.0.1
-        id: python-3.7-spark-3.0.1
+        id: python-37-spark-301
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -70,7 +70,7 @@ jobs:
             PY4J_VERSION=0.10.9
       -
         name: Build and push - python-3.8-spark-3.0.1-openjdk-8
-        id: python-3.8-spark-3.0.1-openjdk-8
+        id: python-38-spark-301-openjdk-8
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -82,7 +82,7 @@ jobs:
             PY4J_VERSION=0.10.9
       -
         name: Build and push - python-3.8-spark-3.0.1
-        id: python-3.8-spark-3.0.1
+        id: python-38-spark-301
         uses: docker/build-push-action@v2
         with:
           push: true
