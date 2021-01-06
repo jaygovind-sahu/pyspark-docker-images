@@ -3,9 +3,11 @@
 Please report issues or request new images here:<br/>
 https://github.com/jaygovind-sahu/pyspark-docker-images/issues
 
-## Docker tags
+## Docker Hub Tags
 
-| Docker tag                       | Python | Spark | Openjdk   |
+https://hub.docker.com/repository/docker/jaygovind/pyspark/tags
+
+| Tag                              | Python | Spark | Openjdk   |
 |----------------------------------|--------|-------|-----------|
 | latest                           | 3.8    | 3.0.1 | 11        |
 | python-3.8-spark-3.0.1           | 3.8    | 3.0.1 | 11        |
@@ -17,9 +19,21 @@ https://github.com/jaygovind-sahu/pyspark-docker-images/issues
 
 ## Usage
 
-Pull Docker image:
+**Pull the latest Docker image**:
+```shell
+docker pull jaygovind/pyspark
+```
+or
 ```shell
 docker pull jaygovind/pyspark:latest
+```
+
+Pull a Docker image with specific tag:
+```shell
+docker pull jaygovind/pyspark:python-3.8-spark-3.0.1-openjdk-8
+```
+```shell
+docker pull jaygovind/pyspark:python-3.7-spark-3.0.1
 ```
 
 Access shell:
@@ -40,6 +54,11 @@ docker run -it jaygovind/pyspark:latest pyspark
 Access `spark-submit`:
 ```shell
 docker run -it jaygovind/pyspark:latest spark-submit
+```
+
+Access `spark-shell` (if you want to run with Scala):
+```shell
+docker run -it jaygovind/pyspark:latest spark-shell
 ```
 
 ### Running the examples and shell
@@ -76,4 +95,5 @@ Example applications are also provided in Python. For example,
 ```
 
 ### Note
-`entrypoint` for every image is `/bin/bash`.
+* You may want to navigate to `$SPARK_HOME` to run above examples.
+* `entrypoint` for every image is `/bin/bash`.
