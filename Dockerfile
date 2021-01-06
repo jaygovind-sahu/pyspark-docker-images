@@ -17,8 +17,8 @@ ENV PYTHONPATH=$SPARK_HOME/python/lib/py4j-$PY4J_VERSION-src.zip:$PYTHONPATH
 # Install
 RUN apk add --update --no-cache wget bash openjdk$OPENJDK_VERSION && \
     wget -P /tmp https://archive.apache.org/dist/spark/spark-$SPARK_VERSION/$SPARK_PACKAGE.tgz \
-        --tries=5 && \
-    tar xvf /tmp/$SPARK_PACKAGE.tgz --directory /opt && \
+        --tries=5 --quiet && \
+    tar xvf /tmp/$SPARK_PACKAGE.tgz --directory /opt &> /dev/null && \
     rm /tmp/$SPARK_PACKAGE.tgz && \
     apk del wget
 

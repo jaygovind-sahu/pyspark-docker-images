@@ -7,7 +7,7 @@ https://github.com/jaygovind-sahu/pyspark-docker-images/issues
 
 https://hub.docker.com/repository/docker/jaygovind/pyspark/tags
 
-| Tag                              | Python | Spark | Openjdk   |
+| Tag                              | Python | Spark | OpenJDK   |
 |----------------------------------|--------|-------|-----------|
 | latest                           | 3.8    | 3.0.1 | 11        |
 | python-3.8-spark-3.0.1           | 3.8    | 3.0.1 | 11        |
