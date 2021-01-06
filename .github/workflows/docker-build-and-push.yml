@@ -2,7 +2,11 @@ name: Build and Push to Docker Hub
 
 on:
   push:
-    branches: main
+    branches:
+      - main
+    paths:
+      - Dockerfile
+      - .github/workflows/docker-build-and-push.yml
 
 jobs:
   main:
