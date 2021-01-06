@@ -1,4 +1,4 @@
-name: ci-docker-build-and-push
+name: Build and Push to Docker Hub
 
 on:
   push:
@@ -99,13 +99,6 @@ jobs:
         with:
           push: true
           tags: jaygovind/pyspark
-      -
-        name: Update repo description
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: jaygovind/pyspark
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
