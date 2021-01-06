@@ -3,7 +3,7 @@
 Please report issues or request new images here:<br/>
 https://github.com/jaygovind-sahu/pyspark-docker-images/issues
 
-## Docker Hub Tags
+## Docker Hub Tags and Application Versions
 
 https://hub.docker.com/repository/docker/jaygovind/pyspark/tags
 
