@@ -74,3 +74,6 @@ Example applications are also provided in Python. For example,
 ```shell
 ./bin/spark-submit examples/src/main/python/pi.py 10
 ```
+
+### Note
+`entrypoint` for every image is `/bin/bash`.
